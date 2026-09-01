@@ -17,7 +17,7 @@ A lightweight, secure WordPress plugin that adds a custom "Deploy to Netlify" bu
 
    ```php
    // Required: Your Netlify Build Hook URL
-   define('NETLIFY_BUILD_HOOK_URL', '[https://api.netlify.com/build_hooks/your-secret-hook-id](https://api.netlify.com/build_hooks/your-secret-hook-id)');
+   define('NETLIFY_BUILD_HOOK_URL', 'https://api.netlify.com/build_hooks/your-secret-hook-id');
    
    // Optional (but recommended): Your Netlify Project ID (found in Site configuration > Site details) to display the Live Status Badge
    define('NETLIFY_SITE_ID', 'your-site-id-string');
@@ -37,6 +37,5 @@ When using WPGatsby, direct deletions ("Move to Trash") might occasionally be ig
 (Alternatively, if you move items directly to the trash, you must immediately select "Empty Trash" to force a hard database-level delete event before clicking Deploy).
 
 ## Uninstallation
-Deactivate and delete the plugin via the WordPress Dashboard.
-
-Open your root wp-config.php file and manually remove the lines containing NETLIFY_BUILD_HOOK_URL and NETLIFY_SITE_ID to completely clean up your environment.
+1. Deactivate and delete the plugin via the WordPress Dashboard.
+2. Open your root wp-config.php file and manually remove the lines containing NETLIFY_BUILD_HOOK_URL and NETLIFY_SITE_ID to completely clean up your environment.
